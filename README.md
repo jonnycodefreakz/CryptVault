@@ -25,3 +25,6 @@ This is one layer of protection. Pair it with BitLocker, keep your system clean,
 
 Feedback
 This is a personal project, but cryptographic code needs outside eyes. If you find a bug, a security flaw, a design problem, or something that doesn't feel right, open an issue. All feedback matters, especially the critical kind.
+
+Completly safe and tested VirusTotal.com
+https://www.virustotal.com/gui/file/f2d1edb16f66cd12e4643fe4af661dc6a494995c2f97dcdf2af55884a3cd56c5/detection
