@@ -1,6 +1,7 @@
 # CryptVault
 CryptVault 2.0
-AES-256-GCM · Argon2id · hardware-bound · anti-forensic · zero cloud
+
+## AES-256-GCM · Argon2id · hardware-bound · anti-forensic · zero cloud · Air Gapped 
 
 Just your files, encrypted, on your machine.
 
