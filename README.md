@@ -30,7 +30,8 @@ Completly safe and tested VirusTotal.com
 https://www.virustotal.com/gui/file/f2d1edb16f66cd12e4643fe4af661dc6a494995c2f97dcdf2af55884a3cd56c5/detection
 
 
-##cryptvault screenshot
+<img width="1182" height="866" alt="Screenshot 2026-06-11 160545" src="https://github.com/user-attachments/assets/0feee348-d796-48c8-b1b1-2cafdea3bf11" />
 
-![CryptVault Main Screen]
-(Screenshots/Screenshot 2026-06-11 160545.png)
+<img width="1182" height="876" alt="Screenshot 2026-06-11 161039" src="https://github.com/user-attachments/assets/6a71a4d6-b40e-46fb-bb81-4d679a0c37eb" />
+
+<img width="1181" height="871" alt="Screenshot 2026-06-11 160957" src="https://github.com/user-attachments/assets/9f2ac240-9eb3-48d4-b9d9-b1dcfaf63faf" />
