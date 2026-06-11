@@ -37,10 +37,12 @@ private byte[] GetMachineBoundKey(byte[] baseKey)
 
 private string GetMachineIdentifier() =>
     $"{GetCpuId()}|{GetBoard()}|{GetBios()}|{Environment.MachineName}|{GetOs()}";
+
+    
 Exponential Brute-Force Lockout
 After 5 wrong attempts, delays escalate. The lockout state is DPAPI-encrypted and survives restarts:
+-----------------------------------------------------------------------------------------------------
 
-csharp
 private void RecordFail()
 {
     _failedAttempts++;
@@ -53,10 +55,12 @@ private void RecordFail()
     }
     SaveBF(); // DPAPI-protected, persists across sessions
 }
+
+
 Installation Pepper — DPAPI-Protected Secret
 A 256-bit secret is generated once per machine. The vault directory is cryptographically useless without it:
+------------------------------------------------------------------------------------------------------------
 
-csharp
 private static byte[] GenerateInstallationPepper()
 {
     string path = Path.Combine(
@@ -78,10 +82,12 @@ private static byte[] GenerateInstallationPepper()
         FileAttributes.Hidden | FileAttributes.System);
     return pepper;
 }
+
+
 Anti-Forensic Shredding — 7-Pass Overwrite
 Every file deletion overwrites with cryptographic randomness before the file is removed:
+----------------------------------------------------------------------------------------
 
-csharp
 private void ShredFile(string path)
 {
     long len = new FileInfo(path).Length;
@@ -106,10 +112,11 @@ private void ShredFile(string path)
     fs.Close();
     File.Delete(path);
 }
-Memory Protection — Key Zeroed on Lock
-When the vault locks, the key is cryptographically zeroed, not left for the garbage collector:
 
-csharp
+Memory Protection Key Zeroed on Lock
+When the vault locks, the key is cryptographically zeroed, not left for the garbage collector:
+------------------------------------------------------------------------------------------------
+
 private void ClearVaultKey()
 {
     if (_key != null)
